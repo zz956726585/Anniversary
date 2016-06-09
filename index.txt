@@ -1,0 +1,107 @@
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Anniversary</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<embed src="Sugar.mp3"autostart="true"loop="true"hidden="true"></embed>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+		     Maybe this is a suitable gift for you. on a special day.<br />
+             <br />
+		     <br />
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2015-06-09,</span><br />
+			<span class="space"/><span class="comments">*2016-06-08.</span><br />
+			<span class="space"/><span class="comments">**/</span><br />
+			Boy name = <span class="keyword">Mr</span> Liu<br />
+			Girl name = <span class="keyword">Miss</span> Zhong<br />
+			<span class="comments">// Fall in love river.<br />
+			The boy love the girl;<br />
+			<span class="comments">// AS time goes on.</span><br />
+			The boy can not be separated the girl;<br />
+			<span class="comments">// At the same time.</span><br />
+			He really miss her in deep mind;<br />
+			Sometimes the boy just wants to see her smile.<br />
+			<span class="keyword">The boy</span> is very <span class="keyword">happy</span>;<br />
+			<span class="placeholder"/><span class="comments">// Whether it is now</span><br />
+			<span class="placeholder"/><span class="comments">// Still in the distant future.</span><br />
+			<span class="placeholder"/>The boy has but one dream even he might be a fool;<br />
+			<span class="comments">// The boy hopes the girl could well have happy.</span><br />
+			<br>
+			<br>
+
+			I want to say:<br />
+			I love you forever;<br />
+			By you husband.<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Darling, the days we spent together.
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					We will be together forever.<br/>
+					<div class="signature">- 炀</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2015, 11, 3);
+together.setHours(13);
+together.setMinutes(48);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both">
+</div>
+
+
+</body>
+</html>
